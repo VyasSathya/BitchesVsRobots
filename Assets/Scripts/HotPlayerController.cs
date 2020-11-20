@@ -49,7 +49,6 @@ public class HotPlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (m_Inventory.balls.Count != 0 && state == playerState.DEFAULT ) {
-                Debug.Log("Text Throw the Ball");
                 state = playerState.THROW;
                 m_Animator.SetTrigger("isThrowing");
                 currBall = m_Inventory.balls.Pop();

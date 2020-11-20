@@ -26,7 +26,6 @@ public class PlayerInventory : MonoBehaviour
             other.transform.parent = transform;
             other.gameObject.SetActive(false);
             other.GetComponent<Ball>().State = Ball.ballState.PICKED_UP;
-
         }
     }
 

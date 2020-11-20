@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public enum ballState { READY, PICKED_UP }
+    public enum ballState { READY, PICKED_UP, THROWN }
+
     public ballState State;
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class Ball : MonoBehaviour
 
     IEnumerator ballStateDelay()
     {
+        State = Ball.ballState.THROWN;
         yield return new WaitForSeconds(3);
         State = Ball.ballState.READY;
 
